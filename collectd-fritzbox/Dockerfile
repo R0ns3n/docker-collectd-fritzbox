@@ -1,4 +1,4 @@
-FROM arm64v8/alpine:latest
+FROM alpine
 
 LABEL maintainer="Ronny Standtke"
 
@@ -12,10 +12,8 @@ ENV TZ=Europe/Berlin \
 
 RUN apk update \
     && apk upgrade \
-    && apk add --no-cache tzdata py3-pip libxml2-dev libxslt-dev gcc musl-dev python3-dev \
+    && apk add --no-cache tzdata collectd collectd-python collectd-network py3-pip libxml2-dev libxslt-dev gcc musl-dev python3-dev \
     && pip install fritzcollectd
-
-RUN apk add collectd
 
 ADD collectd.conf /etc/collectd/collectd.conf
 ADD start.sh /start.sh

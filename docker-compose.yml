@@ -9,6 +9,7 @@ services:
       - /mnt/user/appdata/grafana:/var/lib/grafana
     ports:
       - "3000:3000"
+    user: "1000"
     depends_on:
       - influxdb
 

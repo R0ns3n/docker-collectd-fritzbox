@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 _target="/etc/collectd/collectd.conf"
 if [ -n "$InfluxDbIp" ]; then
     sed "s|InfluxDbIp|$InfluxDbIp|g" -i "${_target}"
