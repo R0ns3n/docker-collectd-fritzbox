@@ -1,5 +1,6 @@
 ## Docker - Grafana InfluxDB and Collectd with FritzBox plugin
 This includes a preconfigured Collectd including the Pyhton plugin fritzcollectd, based on Docker. Also included a Docker-Compose file to get fast up and monitoring.
+This one can run on a RPi (3/4/4000) running an arm64 OS
 
 ## The following examples / configs are included
 * Docker-Compose-File
@@ -17,7 +18,7 @@ This includes a preconfigured Collectd including the Pyhton plugin fritzcollectd
 4. Go to http://dockerhostip:3000 and start setting up Grafana - Example Grafana-Dashboard can be found in the grafana-dashboard.json 
 
 ## Software used
-* Ubuntu 18.04 LTS
+* Alpine arm64v8
 * InfluxDB v1.8 (v2+ does seem to ignore the influxdb.conf)
 * Grafana
 * Collectd

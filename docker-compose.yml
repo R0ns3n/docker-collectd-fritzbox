@@ -24,7 +24,7 @@ services:
       - "25826:25826/udp"
 
   collectd:
-    image: jammsen/collectd-fritzbox:latest
+    image: r0ns3n/collectd-fritzbox:latest
     network_mode: host
     container_name: collectd-fritzbox
     environment:
